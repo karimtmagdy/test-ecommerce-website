@@ -1,0 +1,10 @@
+{
+  "folders": [
+	{
+		"path": "../Web2"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501
+  }
+}

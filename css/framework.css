@@ -1,0 +1,98 @@
+:root {
+  --main-transition: 0.3s;
+  --clr-black: #020202;
+  --clr-dark: #0a0a0a;
+  --clr-white: #ffffff;
+  --clr-text: #635e5e;
+  --clr-red: #cb1a27;
+}
+/*      *Start ScrollTop*     */
+#scrollTop {
+  position: fixed;
+  background: var(--clr-red);
+  color: var(--clr-white);
+  padding: 6px;
+  bottom: 40px;
+  right: 30px;
+  transition: var(--main-transition);
+}
+/*      *End ScrollTop*     */
+/*      *Start Dark Mode*     */
+header #toggleSwitch {
+  width: 51px;
+  height: 30px;
+  background: var(--clr-dark);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: var(--clr-white) 0 0 2px;
+}
+header #toggleSwitch.active {
+  width: 51px;
+  height: 30px;
+  background: var(--clr-white);
+  border-radius: 20px;
+}
+header #toggleSwitch.active #circle,
+header #toggleSwitch #circle {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 50%;
+  filter: blur(-8px);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 1;
+}
+header #toggleSwitch #circle {
+  background: var(--clr-dark);
+  box-shadow: inset var(--clr-white) 0 0 4px;
+  left: 2px;
+  transition: var(--main-transition);
+}
+header #toggleSwitch.active #circle {
+  background: var(--clr-white);
+  box-shadow: inset var(--clr-dark) 0 0 4px;
+  left: calc(100% - 28px);
+}
+@media (max-width: 600px) {
+  header #toggleSwitch,
+  header #toggleSwitch.active {
+    height: 24px;
+  }
+  header #toggleSwitch.active #circle,
+  header #toggleSwitch #circle {
+    width: 22px;
+    height: 22px;
+  }
+  header #toggleSwitch.active #circle {
+    left: calc(100% - 23.5px);
+  }
+}
+/*      *End Dark Mode*     */
+/*      *Start Menu*     */
+#toggleMenu {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+#toggleMenu span {
+  background: var(--clr-white);
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  transition: var(--main-transition);
+}
+#toggleMenu.active span {
+  background: var(--clr-red);
+}
+#toggleMenu.active span:first-child {
+  transform: translateY(10px) rotate(45deg);
+}
+#toggleMenu.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+#toggleMenu.active span:last-child {
+  transform: translateY(-10px) rotate(-45deg);
+}
+/*      *End Menu*     */

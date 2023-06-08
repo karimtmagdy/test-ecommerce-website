@@ -1,0 +1,56 @@
+header {
+  background: var(--clr-black);
+  height: 50px;
+  font-family: "Bruno Ace SC";
+  transition: var(--main-transition);
+  z-index: 1000;
+}
+header.active {
+  background: var(--clr-dark);
+}
+header #logo {
+  color: var(--clr-white);
+  font-variant: small-caps;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  transition: var(--main-transition);
+  display: block;
+}
+header nav ul li a:hover {
+  color: var(--clr-white);
+}
+@media (max-width: 767px) {
+  nav ul {
+    position: fixed;
+    left: -40%;
+    top: 50px;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--clr-black);
+    width: 40%;
+    transition: var(--main-transition);
+    text-align: center;
+  }
+  header.active nav ul {
+    background: var(--clr-dark);
+  }
+  ul.active {
+    left: 0;
+    padding: 5px !important;
+  }
+  ul li a {
+    transition: var(--main-transition);
+    padding: 5px;
+    border-radius: 6px;
+  }
+  ul li a:hover {
+    background-color: rgb(83, 83, 83);
+    width: 100%;
+  }
+}

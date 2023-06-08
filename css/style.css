@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bruno+Ace+SC&family=Open+Sans:wght@300;400;700&family=Oswald:wght@700&family=Poppins:wght@200;500&display=swap");
+/*font: style variant weight size family; */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-transition: 0.3s;
+  --clr-black: #020202;
+  --clr-dark: #0a0a0a;
+  --clr-white: #ffffff;
+  --clr-text: #635e5e;
+  --clr-red: #cb1a27;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  font-family: "Open Sans", sans-serif "Anton", "Bebas Neue", "Bruno Ace SC", cursive, "Oswald", "Poppins";
+}
+body.active {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}  
+#homeTitle {
+  height: 100%;
+}
+#homeTitle .image {
+  background: url(/img/appleblack.png) no-repeat center;
+  width: 300px;
+  height: 200px;
+  background-size: contain;
+}
+body.active #homeTitle .image {
+  background: url(/img/applewhite.png) no-repeat center;
+  background-size: contain;
+}
+#homeTitle #description h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+#homeTitle #description article {
+  font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+  #homeTitle .container {
+    flex-direction: column;
+  }
+}
+#homeTitle #description article {
+  color: var(--clr-text);
+}
+#products .container {
+  grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+}
+.product {
+  background: #f3f3f3;
+}
+body.active .product {
+  background: #eee5e5;
+  color: #020202;
+}
+.product img {
+  margin: auto;
+  width: fit-content;
+  height: 200px;
+}
+/* style="width: 18rem; */
